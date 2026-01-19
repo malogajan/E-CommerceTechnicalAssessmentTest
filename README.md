@@ -20,7 +20,7 @@ https://demowebshop.tricentis.com/
 
 
 
-✅ Positive Scenario
+Positive Scenario
 1. Test Case - Automate the User Registration process
    Steps to Automate:
 2. Open this URL: https://demowebshop.tricentis.com/
@@ -29,7 +29,7 @@ https://demowebshop.tricentis.com/
 5. Click on the Register button.
 6. Validate that the message "Your registration completed" is displayed.
 
-❌ Negative Scenarios
+Negative Scenarios
 1. Test Case - Verify invalid email address error on Login
    Steps to Automate:
 2. Open this URL: https://demowebshop.tricentis.com/
@@ -66,11 +66,11 @@ Validate that:
 6. Product names or descriptions contain the search keyword.
 
 Expected Result:
-✅ Products relevant to the keyword are displayed on the results page.
+Products relevant to the keyword are displayed on the results page.
 
 Automate End-to-End Buy Product Flow
 
-✅Objective  
+Objective  
 Ensure that a user can successfully purchase a product from registration/login to order confirmation.
 Steps to Automate (End-to-End Flow)
 1. Launch the application:
@@ -111,7 +111,7 @@ Steps to Automate (End-to-End Flow)
     - Click Confirm.
 15. Order Success Page:
     - Validate message:  
-      ✅ “Your order has been successfully processed!”
+      “Your order has been successfully processed!”
     - Optionally, print or capture the order number.
     - 
 🛠 Technologies Used
