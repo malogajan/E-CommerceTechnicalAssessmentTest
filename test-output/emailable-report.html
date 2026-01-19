@@ -1,145 +1,48 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml">
 <head>
-<meta charset='utf-8'>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <title>TestNG Report</title>
-<style type="text/css">
-table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
-td,th {border:1px solid #009;padding:.25em .5em}
-.result th {vertical-align:bottom}
-.param th {padding-left:1em;padding-right:1em}
-.param td {padding-left:.5em;padding-right:2em}
-.stripe td,.stripe th {background-color: #E6EBF9}
-.numi,.numi_attn {text-align:right}
-.total td {font-weight:bold}
-.passedodd td {background-color: #0A0}
-.passedeven td {background-color: #3F3}
-.skippedodd td {background-color: #CCC}
-.skippedodd td {background-color: #DDD}
-.failedodd td,.numi_attn {background-color: #F33}
-.failedeven td,.stripe .numi_attn {background-color: #D00}
-.stacktrace {white-space:pre;font-family:monospace}
-.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
-</style>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
 </head>
 <body>
-<table cellspacing="0" cellpadding="0" class="testOverview">
-<tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em"><a href="#t1">Demo Web Shop Functional Tests</a></td><td class="numi">11</td><td class="numi">11</td><td class="numi">0</td><td class="numi_attn">6</td><td class="numi">258.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">E-COMMERCE DemoWebShop Automation Suite</th></tr>
+<tr><td><a href="#t0">E-COMMERCE DemoWebShop Functional Tests</a></td><td class="num">13</td><td class="num">0</td><td class="num">0</td><td class="num attn">4</td><td class="num">259,593</td><td></td><td></td></tr>
 </table>
-<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
-<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr id="t1"><th colspan="5">Demo Web Shop Functional Tests &#8212; failed</th></tr>
-<tr class="failedodd"><td>tests.AccountValidationTest</td><td><a href="#m1"><b>verifyUserAccountDetails</b>  </a></td><td class="numi">1</td><td>1745004173185</td><td class="numi">1204</td></tr>
-<tr class="failedeven"><td>tests.CartTest</td><td><a href="#m2"><b>userShouldSeeItemInCart</b>  </a></td><td class="numi">1</td><td>1745004089013</td><td class="numi">12817</td></tr>
-<tr class="failedodd"><td>tests.CheckoutTest</td><td><a href="#m3"><b>userCanCheckoutAsGuest</b>  </a></td><td class="numi">1</td><td>1745004112401</td><td class="numi">2110</td></tr>
-<tr class="failedeven"><td>tests.LoginTest</td><td><a href="#m4"><b>userShouldSeeErrorMessageForInvalidLogin</b>  </a></td><td class="numi">1</td><td>1745003950363</td><td class="numi">11181</td></tr>
-<tr class="failedodd"><td rowspan="2">tests.NegativeTests</td><td><a href="#m5"><b>checkoutWithoutAcceptingTerms</b>  </a></td><td class="numi">1</td><td>1745004010393</td><td class="numi">12766</td></tr><tr class="failedodd"><td><a href="#m6"><b>loginWithInvalidCredentials</b>  </a></td><td class="numi">1</td><td>1745004033099</td><td class="numi">11056</td></tr>
-<tr><th colspan="5">Demo Web Shop Functional Tests &#8212; passed</th></tr>
-<tr class="passedodd"><td>tests.HomePageTest</td><td><a href="#m7"><b>homePageShouldHaveCorrectTitle</b>  </a></td><td class="numi">1</td><td>1745003972320</td><td class="numi">5</td></tr>
-<tr class="passedeven"><td>tests.ComputersTest</td><td><a href="#m8"><b>userCanNavigateToAccessories</b>  </a></td><td class="numi">1</td><td>1745004138769</td><td class="numi">1743</td></tr>
-<tr class="passedodd"><td>tests.HomePageTest</td><td><a href="#m9"><b>shouldNavigateToRegisterPage</b>  </a></td><td class="numi">1</td><td>1745003997897</td><td class="numi">625</td></tr>
-<tr class="passedeven"><td>tests.LoginTest</td><td><a href="#m10"><b>userShouldLoginSuccessfullyWithValidCredentials</b>  </a></td><td class="numi">1</td><td>1745003938663</td><td class="numi">2042</td></tr>
-<tr class="passedodd"><td>tests.CartTest</td><td><a href="#m11"><b>userShouldBeAbleToRemoveItemFromCart</b>  </a></td><td class="numi">1</td><td>1745004066973</td><td class="numi">10867</td></tr>
-<tr class="passedeven"><td rowspan="3">tests.ComputersTest</td><td><a href="#m12"><b>userCanNavigateToDesktops</b>  </a></td><td class="numi">1</td><td>1745004151622</td><td class="numi">1594</td></tr><tr class="passedeven"><td><a href="#m13"><b>userCanNavigateToNotebooks</b>  </a></td><td class="numi">1</td><td>1745004162063</td><td class="numi">1657</td></tr><tr class="passedeven"><td><a href="#m14"><b>userCanAccessComputersSection</b>  </a></td><td class="numi">1</td><td>1745004127005</td><td class="numi">1132</td></tr>
-<tr class="passedodd"><td>tests.HomePageTest</td><td><a href="#m15"><b>shouldNavigateToLoginPage</b>  </a></td><td class="numi">1</td><td>1745003985374</td><td class="numi">552</td></tr>
-<tr class="passedeven"><td>tests.NegativeTests</td><td><a href="#m16"><b>registerWithExistingEmail</b>  </a></td><td class="numi">1</td><td>1745004052811</td><td class="numi">1688</td></tr>
-<tr class="passedodd"><td>tests.RegisterTest</td><td><a href="#m17"><b>userShouldRegisterSuccessfully</b>  </a></td><td class="numi">1</td><td>1745003926203</td><td class="numi">2215</td></tr>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">E-COMMERCE DemoWebShop Automation Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">E-COMMERCE DemoWebShop Functional Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.CartTest</td><td><a href="#m0">userShouldSeeItemInCart</a></td><td rowspan="1">1768855130177</td><td rowspan="1">2346</td></tr><tr class="failedodd"><td rowspan="1">tests.CheckoutTest</td><td><a href="#m1">userCanCheckoutAsGuest</a></td><td rowspan="1">1768855143981</td><td rowspan="1">2158</td></tr><tr class="failedeven"><td rowspan="2">tests.NegativeTests</td><td><a href="#m2">checkoutWithoutAcceptingTerms</a></td><td rowspan="1">1768855067393</td><td rowspan="1">2123</td></tr><tr class="failedeven"><td><a href="#m3">loginWithInvalidCredentials</a></td><td rowspan="1">1768855081192</td><td rowspan="1">1471</td></tr><tr><th colspan="4">E-COMMERCE DemoWebShop Functional Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.AccountValidationTest</td><td><a href="#m4">verifyUserAccountDetails</a></td><td rowspan="1">1768855221832</td><td rowspan="1">5045</td></tr><tr class="passedodd"><td rowspan="1">tests.CartTest</td><td><a href="#m5">userShouldBeAbleToRemoveItemFromCart</a></td><td rowspan="1">1768855108617</td><td rowspan="1">10825</td></tr><tr class="passedeven"><td rowspan="4">tests.ComputersTest</td><td><a href="#m6">userCanAccessComputersSection</a></td><td rowspan="1">1768855157467</td><td rowspan="1">1177</td></tr><tr class="passedeven"><td><a href="#m7">userCanNavigateToAccessories</a></td><td rowspan="1">1768855171081</td><td rowspan="1">1867</td></tr><tr class="passedeven"><td><a href="#m8">userCanNavigateToDesktops</a></td><td rowspan="1">1768855193184</td><td rowspan="1">2247</td></tr><tr class="passedeven"><td><a href="#m9">userCanNavigateToNotebooks</a></td><td rowspan="1">1768855209102</td><td rowspan="1">1630</td></tr><tr class="passedodd"><td rowspan="3">tests.HomePageTest</td><td><a href="#m10">homePageShouldHaveCorrectTitle</a></td><td rowspan="1">1768855030519</td><td rowspan="1">14</td></tr><tr class="passedodd"><td><a href="#m11">shouldNavigateToLoginPage</a></td><td rowspan="1">1768855042479</td><td rowspan="1">633</td></tr><tr class="passedodd"><td><a href="#m12">shouldNavigateToRegisterPage</a></td><td rowspan="1">1768855055196</td><td rowspan="1">722</td></tr><tr class="passedeven"><td rowspan="2">tests.LoginTest</td><td><a href="#m13">userShouldLoginSuccessfullyWithValidCredentials</a></td><td rowspan="1">1768854999804</td><td rowspan="1">2389</td></tr><tr class="passedeven"><td><a href="#m14">userShouldSeeErrorMessageForInvalidLogin</a></td><td rowspan="1">1768855014301</td><td rowspan="1">1336</td></tr><tr class="passedodd"><td rowspan="1">tests.NegativeTests</td><td><a href="#m15">registerWithExistingEmail</a></td><td rowspan="1">1768855094646</td><td rowspan="1">1832</td></tr><tr class="passedeven"><td rowspan="1">tests.RegisterTest</td><td><a href="#m16">userShouldRegisterSuccessfully</a></td><td rowspan="1">1768854978108</td><td rowspan="1">2257</td></tr></tbody>
 </table>
-<h1>Demo Web Shop Functional Tests</h1>
-<h2 id="m1">tests.NegativeTests:checkoutWithoutAcceptingTerms</h2>
-<div>
-<div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: #checkout
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<h2>E-COMMERCE DemoWebShop Functional Tests</h2><h3 id="m0">tests.CartTest#userShouldSeeItemInCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.UnhandledAlertException: Unexpected alert dialog detected. Performed handler &quot;dismiss&quot;: 
 Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [cab34d2d-fa2e-475c-8f75-5e887da0898c, findElement {value=checkout, using=id}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0.2, moz:accessibilityChecks: false, moz:buildID: 20250414091429, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 30020, moz:profile: C:\Users\JAN~1.SEO\AppData\..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: cab34d2d-fa2e-475c-8f75-5e887da0898c
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+Command: [fe77631d-9e31-4750-ac2b-996545a66e4e, findElements {using=css selector, value=.cart-item-row}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 33892, moz:profile: C:\Users\JAN~1.SEO\AppData\..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: fe77631d-9e31-4750-ac2b-996545a66e4e
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at tests.NegativeTests.checkoutWithoutAcceptingTerms(NegativeTests.java:48)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:362)
+	at pages.CartPage.getNumberOfItemsInCart(CartPage.java:26)
+	at tests.CartTest.userShouldSeeItemInCart(CartTest.java:21)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 25 stack frames</div>
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">tests.NegativeTests:loginWithInvalidCredentials</h2>
-<div>
-<div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: .message-error.validation-summary-errors
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.CheckoutTest#userCanCheckoutAsGuest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.UnhandledAlertException: Unexpected alert dialog detected. Performed handler &quot;dismiss&quot;: 
 Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [3604e847-3434-4dd4-80c6-64aabbe78750, findElement {value=.message-error.validation-summary-errors, using=css selector}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0.2, moz:accessibilityChecks: false, moz:buildID: 20250414091429, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 28528, moz:profile: C:\Users\JAN~1.SEO\AppData\..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 3604e847-3434-4dd4-80c6-64aabbe78750
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at pages.LoginPage.getLoginError(LoginPage.java:21)
-	at tests.NegativeTests.loginWithInvalidCredentials(NegativeTests.java:20)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 25 stack frames</div>
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">tests.LoginTest:userShouldSeeErrorMessageForInvalidLogin</h2>
-<div>
-<div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: .message-error.validation-summary-errors (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0.2, moz:accessibilityChecks: false, moz:buildID: 20250414091429, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 30008, moz:profile: C:\Users\JAN~1.SEO\AppData\..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: d907e23d-5847-4d4d-abc8-159e2e052d49
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at tests.LoginTest.userShouldSeeErrorMessageForInvalidLogin(LoginTest.java:53)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 22 stack frames</div>
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">tests.CartTest:userShouldSeeItemInCart</h2>
-<div>
-<div class="stacktrace">java.lang.AssertionError: ❌ No items found in cart! expected [true] but found [false]
-	at tests.CartTest.userShouldSeeItemInCart(CartTest.java:22)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 25 stack frames</div>
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">tests.CheckoutTest:userCanCheckoutAsGuest</h2>
-<div>
-<div class="stacktrace">org.openqa.selenium.UnhandledAlertException: Unexpected alert dialog detected. Performed handler &quot;dismiss&quot;. Dialog text: Failed to add the product to the cart. Please refresh the page and try one more time.: 
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [8771577e-8a0a-4ab6-96fe-c416cc9e1c51, findElement {value=termsofservice, using=id}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0.2, moz:accessibilityChecks: false, moz:buildID: 20250414091429, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 17192, moz:profile: C:\Users\JAN~1.SEO\AppData\..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 8771577e-8a0a-4ab6-96fe-c416cc9e1c51
+Command: [0e04758a-26fb-46cc-a3fb-6aac76d52950, findElement {using=id, value=termsofservice}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 47796, moz:profile: C:\Users\JAN~1.SEO\AppData\..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 0e04758a-26fb-46cc-a3fb-6aac76d52950
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
@@ -150,43 +53,51 @@ Session ID: 8771577e-8a0a-4ab6-96fe-c416cc9e1c51
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at tests.CheckoutTest.userCanCheckoutAsGuest(CheckoutTest.java:19)
+	at tests.CheckoutTest.userCanCheckoutAsGuest(CheckoutTest.java:31)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 22 stack frames</div>
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">tests.AccountValidationTest:verifyUserAccountDetails</h2>
-<div>
-<div class="stacktrace">java.lang.AssertionError: ❌ My Account page not loaded. expected [true] but found [false]
-	at tests.AccountValidationTest.verifyUserAccountDetails(AccountValidationTest.java:26)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.NegativeTests#checkoutWithoutAcceptingTerms</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.UnhandledAlertException: Unexpected alert dialog detected. Performed handler &quot;dismiss&quot;: 
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1e365398-c48b-41ca-a5c1-f73846758f83, findElement {using=id, value=checkout}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 44400, moz:profile: C:\Users\JAN~1.SEO\AppData\..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 1e365398-c48b-41ca-a5c1-f73846758f83
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at tests.NegativeTests.checkoutWithoutAcceptingTerms(NegativeTests.java:75)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 25 stack frames</div>
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">tests.HomePageTest:shouldNavigateToRegisterPage</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">tests.NegativeTests:registerWithExistingEmail</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">tests.HomePageTest:homePageShouldHaveCorrectTitle</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m10">tests.ComputersTest:userCanNavigateToDesktops</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m11">tests.LoginTest:userShouldLoginSuccessfullyWithValidCredentials</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m12">tests.RegisterTest:userShouldRegisterSuccessfully</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m13">tests.CartTest:userShouldBeAbleToRemoveItemFromCart</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m14">tests.ComputersTest:userCanAccessComputersSection</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m15">tests.HomePageTest:shouldNavigateToLoginPage</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m16">tests.ComputersTest:userCanNavigateToAccessories</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m17">tests.ComputersTest:userCanNavigateToNotebooks</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-</body></html>
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.NegativeTests#loginWithInvalidCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Error message not displayed as expected expected [true] but found [false]
+	at tests.NegativeTests.loginWithInvalidCredentials(NegativeTests.java:33)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.AccountValidationTest#verifyUserAccountDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.CartTest#userShouldBeAbleToRemoveItemFromCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.ComputersTest#userCanAccessComputersSection</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">tests.ComputersTest#userCanNavigateToAccessories</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">tests.ComputersTest#userCanNavigateToDesktops</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">tests.ComputersTest#userCanNavigateToNotebooks</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">tests.HomePageTest#homePageShouldHaveCorrectTitle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">tests.HomePageTest#shouldNavigateToLoginPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">tests.HomePageTest#shouldNavigateToRegisterPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">tests.LoginTest#userShouldLoginSuccessfullyWithValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">tests.LoginTest#userShouldSeeErrorMessageForInvalidLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">tests.NegativeTests#registerWithExistingEmail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">tests.RegisterTest#userShouldRegisterSuccessfully</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

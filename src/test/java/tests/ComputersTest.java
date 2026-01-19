@@ -15,11 +15,11 @@ public class ComputersTest extends BaseTest {
 
         // Verify user landed on Computers page
         ComputersPage computers = new ComputersPage(driver);
-        Assert.assertTrue(computers.isDesktopsLinkVisible(), "❌ Desktops link is not visible.");
-        Assert.assertTrue(computers.isNotebooksLinkVisible(), "❌ Notebooks link is not visible.");
-        Assert.assertTrue(computers.isAccessoriesLinkVisible(), "❌ Accessories link is not visible.");
+        Assert.assertTrue(computers.isDesktopsLinkVisible(), "Desktops link is not visible.");
+        Assert.assertTrue(computers.isNotebooksLinkVisible(), "Notebooks link is not visible.");
+        Assert.assertTrue(computers.isAccessoriesLinkVisible(), "Accessories link is not visible.");
 
-        System.out.println("✅ All Computers category links are visible.");
+        System.out.println("All Computers category links are visible.");
     }
 
     @Test
@@ -31,8 +31,8 @@ public class ComputersTest extends BaseTest {
         computers.clickDesktops();
 
         // Assert we're on the right page (you can check URL or any unique element on Desktops page)
-        Assert.assertTrue(driver.getCurrentUrl().contains("desktops"), "❌ Not on Desktops page.");
-        System.out.println("✅ Navigated to Desktops page.");
+        Assert.assertTrue(driver.getCurrentUrl().contains("desktops"), "Not on Desktops page.");
+        System.out.println("Navigated to Desktops page.");
     }
 
     @Test
@@ -43,8 +43,8 @@ public class ComputersTest extends BaseTest {
         ComputersPage computers = new ComputersPage(driver);
         computers.clickNotebooks();
 
-        Assert.assertTrue(driver.getCurrentUrl().contains("notebooks"), "❌ Not on Notebooks page.");
-        System.out.println("✅ Navigated to Notebooks page.");
+        Assert.assertTrue(driver.getCurrentUrl().contains("notebooks"), "Not on Notebooks page.");
+        System.out.println("Navigated to Notebooks page.");
     }
 
     @Test
@@ -55,7 +55,7 @@ public class ComputersTest extends BaseTest {
         ComputersPage computers = new ComputersPage(driver);
         computers.clickAccessories();
 
-        Assert.assertTrue(driver.getCurrentUrl().contains("accessories"), "❌ Not on Accessories page.");
-        System.out.println("✅ Navigated to Accessories page.");
+        Assert.assertTrue(driver.getCurrentUrl().contains("accessories"), "Not on Accessories page.");
+        System.out.println("Navigated to Accessories page.");
     }
 }

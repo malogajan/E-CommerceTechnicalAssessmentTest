@@ -13,8 +13,8 @@ public class HomePageTest extends BaseTest {
 
         // Assert URL or Title of Login Page
         String expectedUrlPart = "/login";
-        Assert.assertTrue(driver.getCurrentUrl().contains(expectedUrlPart), "❌ Failed to navigate to Login page.");
-        System.out.println("✅ Navigation to Login page successful.");
+        Assert.assertTrue(driver.getCurrentUrl().contains(expectedUrlPart), "Failed to navigate to Login page.");
+        System.out.println("Navigation to Login page successful.");
     }
 
     @Test
@@ -23,15 +23,15 @@ public class HomePageTest extends BaseTest {
         homePage.clickRegister();
 
         // Assert Title or URL
-        Assert.assertTrue(driver.getTitle().contains("Register"), "❌ Register page title mismatch.");
-        System.out.println("✅ Navigation to Register page successful.");
+        Assert.assertTrue(driver.getTitle().contains("Register"), "Register page title mismatch.");
+        System.out.println("Navigation to Register page successful.");
     }
 
     @Test
     public void homePageShouldHaveCorrectTitle() {
         String actualTitle = driver.getTitle();
         String expectedTitle = "Demo Web Shop"; // Change this if the site title differs
-        Assert.assertTrue(actualTitle.contains(expectedTitle), "❌ Home page title is incorrect.");
-        System.out.println("✅ Home page title is correct.");
+        Assert.assertTrue(actualTitle.contains(expectedTitle), "Home page title is incorrect.");
+        System.out.println("Home page title is correct.");
     }
 }

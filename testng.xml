@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="DemoWebShop Automation Suite" parallel="false">
+<suite name="E-COMMERCE DemoWebShop Automation Suite" parallel="false">
 
-    <test name="Demo Web Shop Functional Tests">
+    <test name="E-COMMERCE DemoWebShop Functional Tests">
         <classes>
             <class name="tests.RegisterTest"/>
             <class name="tests.LoginTest"/>
@@ -15,5 +15,4 @@
             <class name="tests.AccountValidationTest"/>
         </classes>
     </test>
-
 </suite>

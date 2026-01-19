@@ -19,8 +19,8 @@ public class CartTest extends BaseTest {
         cartPage.openCart();
 
         int itemCount = cartPage.getNumberOfItemsInCart();
-        Assert.assertTrue(itemCount > 0, "❌ No items found in cart!");
-        System.out.println("✅ Cart contains " + itemCount + " item(s).");
+        Assert.assertTrue(itemCount > 0, "No items found in cart!");
+        System.out.println("Cart contains " + itemCount + " item(s).");
     }
 
     @Test
@@ -32,10 +32,10 @@ public class CartTest extends BaseTest {
         if (itemCountBefore > 0) {
             cartPage.removeItemFromCart(0);
             boolean empty = cartPage.isCartEmpty();
-            Assert.assertTrue(empty, "❌ Cart is not empty after removing item.");
-            System.out.println("✅ Cart is empty after removing item.");
+            Assert.assertTrue(empty, "Cart is not empty after removing item.");
+            System.out.println("Cart is empty after removing item.");
         } else {
-            System.out.println("⚠️ No item in cart to remove. Test skipped.");
+            System.out.println("No item in cart to remove. Test skipped.");
         }
     }
 }

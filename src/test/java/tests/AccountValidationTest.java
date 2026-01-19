@@ -1,44 +1,64 @@
 package tests;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
-import pages.MyAccountPage;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
 
 public class AccountValidationTest extends BaseTest {
 
     @Test
     public void verifyUserAccountDetails() {
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
         // Navigate to login
         HomePage homePage = new HomePage(driver);
         homePage.clickLogin();
 
-        // Login using valid credentials
+        // Login
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.enterEmail("john@example.com"); // ✅ Replace with a real email
-        loginPage.enterPassword("Test123!");           // ✅ Replace with a real password
+        loginPage.enterEmail("malogajan02@gmail.com");
+        loginPage.enterPassword("Test123!");
         loginPage.clickLogin();
 
-        // Navigate to My Account and validate
-        MyAccountPage accountPage = new MyAccountPage(driver);
+        // Verify login success (Log out link visible)
+        WebElement logoutLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("ico-logout")));
 
-        Assert.assertTrue(accountPage.isMyAccountPageLoaded(), "❌ My Account page not loaded.");
-        System.out.println("✅ My Account page is displayed");
+        Assert.assertTrue(logoutLink.isDisplayed(), "Login failed – Logout link not visible");
+        System.out.println("Login successful");
 
-        Assert.assertTrue(accountPage.isAccountDisplayed(), "❌ Account email is not visible.");
-        System.out.println("✅ Logged in as: " + accountPage.getAccountEmail());
+        // Navigate to My Account (use link text)
+        WebElement myAccountLink = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.linkText("My account"))
+        );
+        myAccountLink.click();
 
-        // Navigate to additional sections
-        accountPage.navigateToOrders();
-        System.out.println("🛒 Navigated to Orders");
+// Verify account email is visible
+        WebElement accountEmail = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".account"))
+        );
+        Assert.assertTrue(accountEmail.isDisplayed(), "Account email not visible");
+        System.out.println("Logged in as: " + accountEmail.getText());
 
-        accountPage.navigateToAddresses();
-        System.out.println("📍 Navigated to Addresses");
+        Assert.assertTrue(accountEmail.isDisplayed(), "Account email not visible");
+        System.out.println("Logged in as: " + accountEmail.getText());
 
-        accountPage.navigateToRewardPoints();
-        System.out.println("🎁 Navigated to Reward Points");
+        // Navigate to Orders
+        driver.findElement(By.linkText("Orders")).click();
+        System.out.println("Navigated to Orders");
 
-        // ✅ You can add more assertions here to verify each section
+        // Navigate to Addresses
+        driver.findElement(By.linkText("Addresses")).click();
+        System.out.println("Navigated to Addresses");
+
+        // Navigate to Reward Points
+        driver.findElement(By.linkText("Reward points")).click();
+        System.out.println("Navigated to Reward Points");
     }
 }

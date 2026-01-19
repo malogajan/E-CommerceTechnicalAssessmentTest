@@ -25,10 +25,10 @@ public class RegisterTest extends BaseTest {
 
         // Assert registration success
         Assert.assertTrue(register.getSuccessMessage().contains("Your registration completed"),
-                "❌ Registration failed!");
-        System.out.println("✅ Registration completed successfully.");
+                "Registration failed!");
+        System.out.println("Registration completed successfully.");
     }
-    // 🔧 Helper method to generate a unique email for each test run
+    // Helper method to generate a unique email for each test run
     private String generateUniqueEmail() {
         return "john" + System.currentTimeMillis() + "@example.com";
     }
