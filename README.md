@@ -114,7 +114,7 @@ Steps to Automate (End-to-End Flow)
       “Your order has been successfully processed!”
     - Optionally, print or capture the order number.
     - 
-🛠 Technologies Used
+Technologies Used
 Java 11+
 Selenium WebDriver
 TestNG
